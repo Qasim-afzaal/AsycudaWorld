@@ -59,35 +59,46 @@ class _CountryPickerScreenState extends State<CountryPickerScreen> {
             padding: const EdgeInsets.all(20),
             child: Column(
               mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.end,
               children: [
-                const SizedBox(height: 50),
-                const Text(
-                  textAlign: TextAlign.center,
-                  "Asycuda World \n Mobile App",
-                  style: TextStyle(
-                    color: Colors.yellow,
-                    fontSize: 25,
-                    fontWeight: FontWeight.w800,
+                SizedBox(
+                  height: 10,
+                ),
+                Image.asset(
+                  "assets/images/splash/animated_logo_bounce.gif",
+                  height: 90,
+                  width: 90,
+                ),
+                const SizedBox(height: 30),
+                const Center(
+                  child: Text(
+                    textAlign: TextAlign.center,
+                    "Asycuda World \n Mobile App",
+                    style: TextStyle(
+                      color: Colors.red,
+                      fontSize: 30,
+                      fontWeight: FontWeight.w800,
+                    ),
                   ),
                 ),
                 const SizedBox(height: 50),
-                const Text(
-                  textAlign: TextAlign.center,
-                  "Please make a selection",
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 18,
-                    fontWeight: FontWeight.w600,
+                const Center(
+                  child: Text(
+                    textAlign: TextAlign.center,
+                    "Please make a selection",
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 20,
+                      fontWeight: FontWeight.w800,
+                    ),
                   ),
                 ),
                 const SizedBox(height: 20),
-                 Row(
+                Row(
                   children: [
                     Expanded(
                       child: GestureDetector(
-                        onTap: () {
-                         
-                        },
+                        onTap: () {},
                         child: Container(
                           padding: const EdgeInsets.symmetric(vertical: 15),
                           decoration: BoxDecoration(
@@ -95,18 +106,23 @@ class _CountryPickerScreenState extends State<CountryPickerScreen> {
                             borderRadius: BorderRadius.circular(15),
                             border: Border.all(color: Colors.white, width: 2),
                           ),
-                          child:  Row(
+                          child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Image.asset("assets/images/home/youtube.png",height: 20,width: 40,),
-                              const SizedBox(width: 5,),
+                              Image.asset(
+                                "assets/images/home/youtube.png",
+                                height: 20,
+                                width: 40,
+                              ),
+                              const SizedBox(
+                                width: 5,
+                              ),
                               const Text(
                                 "How to use",
                                 style: TextStyle(
-                                  color: Colors.black,
-                                  fontWeight: FontWeight.w600,
-                                  fontSize: 16
-                                ),
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.w700,
+                                    fontSize: 17),
                               ),
                             ],
                           ),
@@ -115,7 +131,7 @@ class _CountryPickerScreenState extends State<CountryPickerScreen> {
                     ),
                   ],
                 ),
-                 const SizedBox(height: 20),
+                const SizedBox(height: 20),
                 GestureDetector(
                   onTap: () {
                     showCountryPicker(
@@ -144,13 +160,13 @@ class _CountryPickerScreenState extends State<CountryPickerScreen> {
                         if (selectedCountry != null)
                           Text(
                             selectedCountry!.flagEmoji,
-                            style: const TextStyle(fontSize: 24),
+                            style: const TextStyle(fontSize: 24,),
                           ),
                         const SizedBox(width: 8),
                         Text(
                           selectedCountry?.name ?? 'Select a country',
                           style: const TextStyle(
-                              fontSize: 16, color: Colors.black),
+                              fontSize: 17, color: Colors.black,fontWeight: FontWeight.w600),
                         ),
                       ],
                     ),
@@ -175,9 +191,9 @@ class _CountryPickerScreenState extends State<CountryPickerScreen> {
                             child: Text(
                               "LIVE SERVER",
                               style: TextStyle(
-                                color: Colors.white,
-                                fontWeight: FontWeight.w500,
-                              ),
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w700,
+                                  fontSize: 17),
                             ),
                           ),
                         ),
@@ -202,9 +218,9 @@ class _CountryPickerScreenState extends State<CountryPickerScreen> {
                             child: Text(
                               "TRAINING SERVER",
                               style: TextStyle(
-                                color: Colors.white,
-                                fontWeight: FontWeight.w500,
-                              ),
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w700,
+                                  fontSize: 17),
                             ),
                           ),
                         ),
@@ -229,9 +245,9 @@ class _CountryPickerScreenState extends State<CountryPickerScreen> {
                             child: Text(
                               "SUBSCRIPTION",
                               style: TextStyle(
-                                color: Colors.white,
-                                fontWeight: FontWeight.w500,
-                              ),
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w700,
+                                  fontSize: 17),
                             ),
                           ),
                         ),
