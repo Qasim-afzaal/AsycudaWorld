@@ -81,6 +81,41 @@ class _CountryPickerScreenState extends State<CountryPickerScreen> {
                   ),
                 ),
                 const SizedBox(height: 20),
+                 Row(
+                  children: [
+                    Expanded(
+                      child: GestureDetector(
+                        onTap: () {
+                         
+                        },
+                        child: Container(
+                          padding: const EdgeInsets.symmetric(vertical: 15),
+                          decoration: BoxDecoration(
+                            color: Colors.orange,
+                            borderRadius: BorderRadius.circular(15),
+                            border: Border.all(color: Colors.white, width: 2),
+                          ),
+                          child:  Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Image.asset("assets/images/home/youtube.png",height: 20,width: 40,),
+                              SizedBox(width: 10,),
+                              const Text(
+                                "How to use",
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w600,
+                                  fontSize: 16
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                 const SizedBox(height: 20),
                 GestureDetector(
                   onTap: () {
                     showCountryPicker(
