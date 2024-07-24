@@ -99,7 +99,7 @@ class _CountryPickerScreenState extends State<CountryPickerScreen> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Image.asset("assets/images/home/youtube.png",height: 20,width: 40,),
-                              SizedBox(width: 5,),
+                              const SizedBox(width: 5,),
                               const Text(
                                 "How to use",
                                 style: TextStyle(
