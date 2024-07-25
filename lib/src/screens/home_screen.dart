@@ -56,12 +56,13 @@ class _CountryPickerScreenState extends State<CountryPickerScreen> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.all(20),
+            padding: const EdgeInsets.fromLTRB(10,20,10,10),
             child: Column(
               mainAxisSize: MainAxisSize.min,
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
-                SizedBox(
+                const SizedBox(
+
                   height: 10,
                 ),
                 Image.asset(
@@ -98,7 +99,9 @@ class _CountryPickerScreenState extends State<CountryPickerScreen> {
                   children: [
                     Expanded(
                       child: GestureDetector(
-                        onTap: () {},
+                        onTap: () {
+                          launchUrl(Uri.parse("https://www.youtube.com/watch?v=wz7OW6luQhY"));
+                        },
                         child: Container(
                           padding: const EdgeInsets.symmetric(vertical: 15),
                           decoration: BoxDecoration(
@@ -115,6 +118,7 @@ class _CountryPickerScreenState extends State<CountryPickerScreen> {
                                 width: 40,
                               ),
                               const SizedBox(
+
                                 width: 5,
                               ),
                               const Text(
@@ -122,7 +126,7 @@ class _CountryPickerScreenState extends State<CountryPickerScreen> {
                                 style: TextStyle(
                                     color: Colors.black,
                                     fontWeight: FontWeight.w700,
-                                    fontSize: 17),
+                                    fontSize: 20),
                               ),
                             ],
                           ),
@@ -160,7 +164,7 @@ class _CountryPickerScreenState extends State<CountryPickerScreen> {
                         if (selectedCountry != null)
                           Text(
                             selectedCountry!.flagEmoji,
-                            style: const TextStyle(fontSize: 24,),
+                            style: const TextStyle(fontSize: 28,),
                           ),
                         const SizedBox(width: 8),
                         Text(
@@ -172,7 +176,7 @@ class _CountryPickerScreenState extends State<CountryPickerScreen> {
                     ),
                   ),
                 ),
-                const SizedBox(height: 20),
+                const SizedBox(height: 40),
                 Row(
                   children: [
                     Expanded(
@@ -193,7 +197,7 @@ class _CountryPickerScreenState extends State<CountryPickerScreen> {
                               style: TextStyle(
                                   color: Colors.white,
                                   fontWeight: FontWeight.w700,
-                                  fontSize: 17),
+                                  fontSize: 20),
                             ),
                           ),
                         ),
@@ -216,11 +220,11 @@ class _CountryPickerScreenState extends State<CountryPickerScreen> {
                           ),
                           child: const Center(
                             child: Text(
-                              "TRAINING SERVER",
+                              "Subscribe",
                               style: TextStyle(
                                   color: Colors.white,
                                   fontWeight: FontWeight.w700,
-                                  fontSize: 17),
+                                  fontSize: 20),
                             ),
                           ),
                         ),
@@ -229,32 +233,6 @@ class _CountryPickerScreenState extends State<CountryPickerScreen> {
                   ],
                 ),
                 const SizedBox(height: 20),
-                Row(
-                  children: [
-                    Expanded(
-                      child: GestureDetector(
-                        onTap: () {},
-                        child: Container(
-                          padding: const EdgeInsets.symmetric(vertical: 15),
-                          decoration: BoxDecoration(
-                            color: Colors.blue,
-                            borderRadius: BorderRadius.circular(15),
-                            border: Border.all(color: Colors.white, width: 2),
-                          ),
-                          child: const Center(
-                            child: Text(
-                              "SUBSCRIPTION",
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.w700,
-                                  fontSize: 17),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
               ],
             ),
           ),
