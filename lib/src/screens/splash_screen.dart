@@ -14,7 +14,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    Future.delayed(Duration(seconds: 3), () {
+    Future.delayed(const Duration(seconds: 3), () {
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(builder: (context) => CountryPickerScreen()), 
@@ -36,8 +36,8 @@ class _SplashScreenState extends State<SplashScreen> {
             ),
             Image.asset(
               "assets/images/splash/animated_logo_bounce.gif",
-              height: 250,
-              width: 250,
+              height: 300,
+              width: 300,
             ),
             const SizedBox(
               height: 30,
@@ -47,7 +47,7 @@ class _SplashScreenState extends State<SplashScreen> {
                 "Asycuda World \n Mobile App",
                 style: TextStyle(
                     color: Colors.yellow,
-                    fontSize: 25,
+                    fontSize: 40,
                     fontWeight: FontWeight.w800)),
             const SizedBox(
               height: 40,
@@ -57,7 +57,7 @@ class _SplashScreenState extends State<SplashScreen> {
                 "Loading...",
                 style: TextStyle(
                     color: Colors.white,
-                    fontSize: 18,
+                    fontSize: 20,
                     fontWeight: FontWeight.w600)),
             const SizedBox(
               height: 40,
@@ -70,7 +70,7 @@ class _SplashScreenState extends State<SplashScreen> {
                       padding: const EdgeInsets.all(8.0),
                       child: Center(
                         child: Image.asset("assets/images/splash/loading.gif",
-                            height: 70, width: 70),
+                            height: 90, width: 90),
                       ),
                     ),
                     const Padding(
